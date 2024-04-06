@@ -6,4 +6,5 @@ npm install
 
 Open build/index.html via web server
 
-![](https://github.com/sdo-7/Match3ts/blob/main/screenshot.png)
+    
+![](https://github.com/sdo-7/Match3ts/blob/master/screenshot.png)
