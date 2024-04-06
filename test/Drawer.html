@@ -1,0 +1,37 @@
+<html>
+  <body>
+    <canvas id="drawcanvas" width="400" height="400"></canvas>
+    <script>
+      const canvas = document.getElementById('drawcanvas');
+      const ctx = canvas.getContext('2d');
+
+      const padding = 2;
+
+      function draw (fillStyle, c, rect, alpha = 100) {
+        const center = {
+          x: rect.x + rect.width/2,
+          y: rect.y + rect.height/2
+        };
+        const radius = Math.min(rect.width, rect.height) / 2 - padding*2;
+
+        c.fillStyle = getFillStyle(fillStyle, alpha);
+        c.beginPath();
+        c.arc(center.x, center.y, radius, 0, Math.PI*2);
+        c.fill();
+      }
+
+      function getFillStyle (fillStyle, alpha) {
+        const res = `rgb(${fillStyle} / ${alpha}%)`;
+        return res;
+      }
+
+      const rect = {
+        x: 10,
+        y: 10,
+        width: 80,
+        height: 80,
+      };
+      draw('255 0 0', ctx, rect);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "name": "match3.ts",
+  "version": "1.0.0",
+  "description": "A simple game",
+  "type": "module",
+  "scripts": {
+    "tsc": "tsc -t es2022 --outDir ./build ./src/Main.ts",
+    "compile": "npm run tsc",
+    "postcompile": "copyfiles -f src/*.html build",
+    "test": "mocha -u exports -- ./test/tests.js",
+    "premake": "del-cli build",
+    "make": "npm run compile",
+    "postmake": "npm test",
+    "install": "npm run compile"
+  },
+  "keywords": [
+    "match3",
+    "game"
+  ],
+  "author": "sdo",
+  "devDependencies": {
+    "del-cli": "^5.1.0",
+    "esmock": "^2.6.3",
+    "mocha": "^10.3.0",
+    "sinon": "^17.0.1"
+  },
+  "dependencies": {
+    "copyfiles": "^2.4.1",
+    "typescript": "^5.3.3"
+  }
+}
