@@ -10,8 +10,7 @@
     "test": "mocha -u exports -- ./test/tests.js",
     "premake": "del-cli build",
     "make": "npm run compile",
-    "postmake": "npm test",
-    "install": "npm run compile"
+    "postmake": "npm test"
   },
   "keywords": [
     "match3",
@@ -19,13 +18,14 @@
   ],
   "author": "sdo",
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "del-cli": "^5.1.0",
     "esmock": "^2.6.3",
     "mocha": "^10.3.0",
-    "sinon": "^17.0.1"
+    "sinon": "^17.0.1",
+    "typescript": "^5.3.3"
   },
   "dependencies": {
-    "copyfiles": "^2.4.1",
-    "typescript": "^5.3.3"
+    "http-server": "^14.1.1"
   }
 }
